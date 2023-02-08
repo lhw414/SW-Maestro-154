@@ -10,8 +10,8 @@ for i in range(m):
 
 res = ""
 
-while(temp>0):
-    res = str(temp%B) + " " + res
+while (temp > 0):
+    res = str(temp % B) + " " + res
     temp = temp//B
 
 print(res)

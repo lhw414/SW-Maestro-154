@@ -6,7 +6,7 @@ def dfs(start, now, value, cnt):
         if arr[now][start]:
             value += arr[now][start]
             minCost = min(minCost, value)
-    
+
     if value > minCost:
         return
 
@@ -15,6 +15,7 @@ def dfs(start, now, value, cnt):
             visited[i] = 1
             dfs(start, i, value + arr[now][i], cnt + 1)
             visited[i] = 0
+
 
 N = int(input())
 

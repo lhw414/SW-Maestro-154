@@ -8,6 +8,6 @@ x, y = map(int, input().split())
 
 for i in range(x-1):
     Day = Day + DayList[i]
-Day = (Day+y)%7
+Day = (Day+y) % 7
 
 print(weekList[Day])

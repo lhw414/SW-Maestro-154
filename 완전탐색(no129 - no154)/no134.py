@@ -2,8 +2,9 @@
 
 from collections import deque
 
+
 def bfs():
-    q= deque()
+    q = deque()
     q.append(N)
     while q:
         x = q.popleft()
@@ -11,11 +12,10 @@ def bfs():
             print(dist[x])
             break
         for nx in (x-1, x+1, x * 2):
-            if 0<=nx<=minAns and not dist[nx]:
+            if 0 <= nx <= minAns and not dist[nx]:
                 dist[nx] = dist[x] + 1
                 q.append(nx)
 
-    
 
 N, K = map(int, input().split())
 

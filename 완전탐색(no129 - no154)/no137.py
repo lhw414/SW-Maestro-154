@@ -4,6 +4,7 @@ from collections import deque
 
 visit = set()
 
+
 def bfs():
     q = deque()
     q.append([board, initZeroIdx, 0])
@@ -14,25 +15,29 @@ def bfs():
             return cnt
         if zeroIdx != 0 and zeroIdx != 3 and zeroIdx != 6:
             newZeroIdx = zeroIdx - 1
-            newBoard = brd[:newZeroIdx] + brd[zeroIdx] + brd[newZeroIdx] + brd[zeroIdx+1:]
+            newBoard = brd[:newZeroIdx] + brd[zeroIdx] + \
+                brd[newZeroIdx] + brd[zeroIdx+1:]
             if newBoard not in visit:
                 q.append([newBoard, newZeroIdx, cnt+1])
                 visit.add(newBoard)
         if zeroIdx != 2 and zeroIdx != 5 and zeroIdx != 8:
             newZeroIdx = zeroIdx + 1
-            newBoard = brd[:zeroIdx] + brd[newZeroIdx] + brd[zeroIdx] + brd[newZeroIdx+1:]
+            newBoard = brd[:zeroIdx] + brd[newZeroIdx] + \
+                brd[zeroIdx] + brd[newZeroIdx+1:]
             if newBoard not in visit:
                 q.append([newBoard, newZeroIdx, cnt+1])
                 visit.add(newBoard)
         if zeroIdx >= 3:
             newZeroIdx = zeroIdx - 3
-            newBoard = brd[:newZeroIdx] + brd[zeroIdx] + brd[newZeroIdx+1:zeroIdx] + brd[newZeroIdx] + brd[zeroIdx+1:]
+            newBoard = brd[:newZeroIdx] + brd[zeroIdx] + \
+                brd[newZeroIdx+1:zeroIdx] + brd[newZeroIdx] + brd[zeroIdx+1:]
             if newBoard not in visit:
                 q.append([newBoard, newZeroIdx, cnt+1])
                 visit.add(newBoard)
         if zeroIdx < 6:
             newZeroIdx = zeroIdx + 3
-            newBoard = brd[:zeroIdx] + brd[newZeroIdx] + brd[zeroIdx+1:newZeroIdx] + brd[zeroIdx] + brd[newZeroIdx+1:]
+            newBoard = brd[:zeroIdx] + brd[newZeroIdx] + brd[zeroIdx +
+                                                             1:newZeroIdx] + brd[zeroIdx] + brd[newZeroIdx+1:]
             if newBoard not in visit:
                 q.append([newBoard, newZeroIdx, cnt+1])
                 visit.add(newBoard)

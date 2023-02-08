@@ -2,11 +2,11 @@
 
 import sys
 
-while(1):
+while (1):
     string = sys.stdin.readline().rstrip('\n')
     if not string:
         break
-    ans = [0, 0, 0, 0] #lower, upper, digit, space
+    ans = [0, 0, 0, 0]  # lower, upper, digit, space
     for char in string:
         if char.islower():
             ans[0] += 1

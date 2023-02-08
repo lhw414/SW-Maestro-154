@@ -7,7 +7,7 @@ prime[1] = False
 for i in range(2, 1001):
     if prime[i]:
         for j in range(2*i, 1000001, i):
-            prime[j]= False
+            prime[j] = False
 
 N, M = map(int, input().split())
 

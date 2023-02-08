@@ -5,6 +5,7 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 T = int(input())
 
 for testCase in range(T):

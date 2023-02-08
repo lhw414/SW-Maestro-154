@@ -10,6 +10,7 @@ def two_count(n):
         two += n
     return two
 
+
 def five_count(n):
     five = 0
     while n != 0:
@@ -17,4 +18,6 @@ def five_count(n):
         five += n
     return five
 
-print(min(two_count(n) - two_count(n - m) - two_count(m), five_count(n) - five_count(n - m) - five_count(m)))
+
+print(min(two_count(n) - two_count(n - m) - two_count(m),
+      five_count(n) - five_count(n - m) - five_count(m)))

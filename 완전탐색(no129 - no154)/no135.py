@@ -6,10 +6,11 @@ from collections import deque
 test_case = int(input())
 primeArr = [True for _ in range(10000)]
 
-for i in range(2, 100): # 제곱근 범위까지
-        if primeArr[i] == True:
-            for j in range(2*i, 10000, i):
-                primeArr[j] = False
+for i in range(2, 100):  # 제곱근 범위까지
+    if primeArr[i] == True:
+        for j in range(2*i, 10000, i):
+            primeArr[j] = False
+
 
 def bfs():
     q = deque()
@@ -24,13 +25,14 @@ def bfs():
 
         if now == M:
             return cnt
-        
+
         for i in range(4):
             for j in range(10):
                 temp = int(strNow[:i] + str(j) + strNow[i+1:])
                 if visitied[temp] == 0 and primeArr[temp] == True and temp >= 1000:
                     visitied[temp] = 1
-                    q.append([temp, cnt + 1]) 
+                    q.append([temp, cnt + 1])
+
 
 for T in range(test_case):
     N, M = map(int, input().split())
