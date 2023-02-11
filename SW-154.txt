@@ -10,11 +10,6 @@
 48	DP	2225
 49	DP	2011
 50	DP	11052
-59	Stack	10828
-60	Stack	9012
-61	Stack	10799
-62	Queue	10845
-63	Deck	10866
 71	Linked-Lists	1406
 72	Linked-Lists	1158
 73	Linked-Lists	1168
