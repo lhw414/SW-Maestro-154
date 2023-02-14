@@ -6,6 +6,7 @@ s = sys.stdin.readline().rstrip()
 
 dp = [[0] * (len(s)), [0] * (len(s))]
 dp[0][0] = 1
+
 if (s[0] == "0"):
     print(0)
 else:
