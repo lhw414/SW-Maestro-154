@@ -1,5 +1,3 @@
-92	Graph	1260
-93	Graph	11724
 94	Graph	1707
 95	Graph	10451
 96	Graph	2331
