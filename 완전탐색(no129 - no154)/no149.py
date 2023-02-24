@@ -14,6 +14,7 @@ for i in range(2, N+1):
 answer = 0
 start = 0
 end = 0
+
 while end <= len(prime_num):
     temp_sum = sum(prime_num[start:end])
     if temp_sum == N:
